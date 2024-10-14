@@ -6,10 +6,8 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import {
     IconBrandGithub,
     IconBrandLinkedin,
-    IconExchange,
     IconFolders,
     IconHome,
-    IconNewSection,
     IconPhone,
     IconTerminal2,
     IconUser,

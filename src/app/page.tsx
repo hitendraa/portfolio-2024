@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <BackgroundBeamsWithCollision className="absolute inset-0 z-0" children={undefined} />
+      <BackgroundBeamsWithCollision className="absolute inset-0 z-0">
       
       <main className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 min-h-screen">
         <section className="w-full lg:w-1/2 space-y-6 text-center lg:text-left" id="home">
@@ -45,6 +45,7 @@ export default function Home() {
       <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
         <FloatingDockDemo />
       </div>
+      </BackgroundBeamsWithCollision>
     </div>
   );
 }

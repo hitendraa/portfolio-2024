@@ -93,7 +93,7 @@ export function FollowingPointerDemo() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  "I am passionate about creating beautiful and functional websites and applications."
+                  &quot;I am passionate about creating beautiful and functional websites and applications.&quot;
                 </motion.p>
               </div>
               <div className="flex justify-between items-center mt-4">

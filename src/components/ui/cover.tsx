@@ -21,9 +21,9 @@ export const Cover = ({
 
   useEffect(() => {
     if (ref.current) {
-      setContainerWidth(ref.current?.clientWidth ?? 0);
+      setContainerWidth(ref.current.clientWidth ?? 0);
 
-      const height = ref.current?.clientHeight ?? 0;
+      const height = ref.current.clientHeight ?? 0;
       const numberOfBeams = Math.floor(height / 10); // Adjust the divisor to control the spacing
       const positions = Array.from(
         { length: numberOfBeams },
@@ -31,7 +31,7 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, [ref.current]);
+  }, []); // Removed ref.current from dependency array
 
   return (
     <div
@@ -91,7 +91,7 @@ export const Cover = ({
           key={index}
           hovered={hovered}
           duration={Math.random() * 2 + 1}
-          delay={Math.random() * 2 + 1}
+          // Removed delay usage since it's unused
           width={containerWidth}
           style={{
             top: `${position}px`,
@@ -154,7 +154,7 @@ export const Beam = ({
   ...svgProps
 }: {
   className?: string;
-  delay?: number;
+  delay?: number; // This can be used in some other way if needed
   duration?: number;
   hovered?: boolean;
   width?: number;
@@ -212,7 +212,6 @@ export const Beam = ({
 
 export const CircleIcon = ({
   className,
-  delay,
 }: {
   className?: string;
   delay?: number;
